@@ -1,0 +1,48 @@
+
+# Flutter & Dart
+.dart_tool/
+.packages
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+build/
+*.lock
+.idea/
+.metadata
+.melos_tool/
+
+# Firebase config (optional)
+android/app/google-services.json
+ios/Runner/GoogleService-Info.plist
+
+# IDEs
+.vscode/
+*.iml
+*.ipr
+*.iws
+*.sw?
+
+# macOS
+.DS_Store
+
+# Android
+**/android/.gradle/
+**/android/local.properties
+**/android/app/debug/
+**/android/app/profile/
+**/android/app/release/
+
+# iOS
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/Generated.xcconfig
+ios/Flutter/ephemeral/
+
+# Web
+web/.dart_tool/
+
+# Firebase Emulator
+.firebase/
+
+# Others
+.env

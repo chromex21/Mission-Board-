@@ -1,5 +1,6 @@
 # Mission-Board V1 
 
+*Basically it's a task organizer app. to organize projects and ideas.*
 *Core Features:*
 1. *User Accounts* – Secure login and profiles.
 2. *Task Creation* – Title, description, deadline, priority.

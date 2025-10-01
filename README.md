@@ -73,3 +73,20 @@ git push origin backup/main-before-rebase
 You can delete the tag later with `git tag -d backup/main-before-rebase` (local) and `git push --delete origin backup/main-before-rebase` (remote).
 
 Using a tag avoids cluttering the branch list while keeping an easy recovery point.
+
+### Helper scripts (Windows PowerShell)
+
+Two convenience scripts are included under `scripts/` for Windows PowerShell users:
+
+- `scripts\start-dev-json-server.ps1` — starts the dev JSON server detached (no blocking terminal).
+- `scripts\tag-backup.ps1` — creates and pushes an annotated backup tag for the current branch.
+
+Usage examples:
+
+```powershell
+# start the dev JSON server in background
+.\scripts\start-dev-json-server.ps1
+
+# create a timestamped backup tag and push it
+.\scripts\tag-backup.ps1
+```

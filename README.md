@@ -58,3 +58,18 @@ This project was bootstrapped with Create React App. See the CRA docs for detail
 ---
 
 *(Merged README: kept your original project description and added the CRA getting-started instructions.)*
+
+## Git workflow: backing up before rewriting history
+
+When you need to rebase or otherwise rewrite history, create a lightweight or annotated backup tag so you can recover the pre-rewrite state without leaving an extra branch:
+
+```powershell
+# create an annotated tag pointing to the current commit
+git tag -a backup/main-before-rebase -m "Backup of local main before rebase on $(Get-Date -Format 'yyyy-MM-dd')"
+# push the tag to origin
+git push origin backup/main-before-rebase
+```
+
+You can delete the tag later with `git tag -d backup/main-before-rebase` (local) and `git push --delete origin backup/main-before-rebase` (remote).
+
+Using a tag avoids cluttering the branch list while keeping an easy recovery point.

@@ -90,3 +90,7 @@ Usage examples:
 # create a timestamped backup tag and push it
 .\scripts\tag-backup.ps1
 ```
+
+### Cleanup note
+
+Legacy/debug helper scripts have been moved to `scripts/legacy/` to keep the top-level `scripts/` directory focused on actively used helpers. The top-level `test.js` (ad-hoc local test harness) was removed — if you need it back it's preserved in the repo history or can be restored from `git reflog`.

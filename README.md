@@ -1,18 +1,60 @@
 # Mission-Board
 
-*Basically it's a app that keep track of projects.*
-*A mockup of the app will be coming soon. follow by a prototype*
+Mission-Board is a small task/mission tracking app built with React. It provides user profiles, mission creation and tracking, achievements, teams, and notification history. This repository contains a Create React App project scaffold plus application source code in `src/`.
 
-*Core Features:*
-1. *User Accounts* – Secure login and profiles.
-2. *Task Creation* – Title, description, deadline, priority.
-3. *Task Assignment* – Send tasks to another user (via username/email).
-4. *Task Tracking* – Status updates (e.g., Not Started, In Progress, Completed).
-5. *Sync & Notifications* – Real-time updates and alerts.
-6. *Progress Overview* – Visual dashboard of completed/pending tasks.
+Core Features
+- User accounts (Firebase Authentication)
+- Mission creation and tracking (title, description, points, recurrence, tags)
+- Achievements and points/streak tracking
+- Notifications with transient toasts and persisted history
+- Optional dev JSON server to persist data locally during development
 
-*Tech Stack Suggestion:*
-- *Frontend*: Flutter (cross-platform for Android/iOS).
-- *Backend*: Firebase (for auth, real-time database, notifications).
-- *Design*: Figma or Canva for UI mockups.
+Tech & Setup Notes
+- Frontend: React (Create React App)
+- Auth: Firebase Authentication (Email/Password + Google)
+- Local persistence: browser localStorage; optional dev JSON server controlled by `REACT_APP_DATA_URL`
 
+## Getting Started (local development)
+
+In the project directory, you can run:
+
+### `npm install`
+
+Install dependencies.
+
+### `npm start`
+
+Runs the app in development mode.
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload when you make changes. You may also see any lint errors in the console.
+
+### Optional: start local dev JSON server
+
+This project includes a small dev JSON server in `scripts/` that provides endpoints for `/data`, `/profiles`, and `/missions`. To run it in development, open a second terminal and run:
+
+```powershell
+npm run dev-data
+```
+
+By default the server listens on port 4000 and writes to `data.json` in the repository root. The app can be pointed to it by setting the environment variable `REACT_APP_DATA_URL` (example shown below).
+
+### `REACT_APP_DATA_URL` (optional)
+
+To make the app use the local dev server for persistence, start the dev server and then run:
+
+```powershell
+#$env:REACT_APP_DATA_URL='http://localhost:4000'; npm start
+```
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.
+
+## Learn More
+
+This project was bootstrapped with Create React App. See the CRA docs for details on advanced usage and deployment.
+
+---
+
+*(Merged README: kept your original project description and added the CRA getting-started instructions.)*
